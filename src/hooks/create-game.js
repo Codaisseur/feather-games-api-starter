@@ -9,6 +9,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     hook.data.goalNumber = 4;
     hook.data.players = [{
       userId: user._id,
+      email: user.email,
       pairs:[]
     }];
     // Hooks can either return nothing or a promise
