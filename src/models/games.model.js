@@ -10,10 +10,19 @@ module.exports = function (app) {
     pairs: [String],
   });
 
+  const numbersSchema = new Schema({
+    number: { type: String},
+    selected: {type: Boolean, default: false},
+  });
+
   const games = new mongooseClient.Schema({
     numbersToChoose: { type: String,  },
     goalNumber: { type: String, },
     players: [playerSchema],
+    numbers: [numbersSchema],
+    time: { type: String },
+    player1SelectedNumbers: { type: String },
+    player1Result: { type: String },
     started: { type: Boolean,  },
     winnerId: { type: String, },
     draw: { type: String,  },

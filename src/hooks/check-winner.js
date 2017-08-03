@@ -3,6 +3,10 @@
 
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
   return function (hook) {
+    const {user} = hook.params;
+
+    hook.data.winnerId = user._id;
+
     // Hooks can either return nothing or a promise
     // that resolves with the `hook` object for asynchronous operations
     return Promise.resolve(hook);
