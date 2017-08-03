@@ -16,7 +16,7 @@ module.exports = function (app) {
   });
 
   const games = new mongooseClient.Schema({
-    numbersToChoose: { type: String,  },
+    numbersToChoose: [{ type: Number,  }],
     goalNumber: { type: String, },
     players: [playerSchema],
     numbers: [numbersSchema],

@@ -22,7 +22,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     const {user} = hook.params;
 
     hook.data.numbersToChoose = getRandomNumArray(20, 40);
-    hook.data.goalNumber = getRandomNum(1, 10);
+    hook.data.goalNumber = getRandomNum(30, 99);
     hook.data.time = 20;
     hook.data.players = [{
       userId: user._id,
